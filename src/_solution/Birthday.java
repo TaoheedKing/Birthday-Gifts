@@ -68,19 +68,18 @@ public class Birthday {
 
 				// Once they enter the toy name, it is added to cart
 				toy.setToy(toyName);
-				// I add it into an array of toys bought
-				// toysBought.add(toyName);
 				toy.setAge(age);
 				toy.setCost(toyName);
+				/**
+				 * if the age is inappropriate, they have a choice to cancel the toy or continue
+				 */
 				if (!(toy.ageOK())) {
 					temp = JOptionPane.showInputDialog("Age is inappropriate. Do you want to cancel? (yes/no)");
 					if (temp.equalsIgnoreCase("no")) {
 						break;
 
 					}
-//				age = Integer.parseInt(temp);
-//				toy.setAge(age);
-				}else {
+				} else {
 					break;
 				}
 			}
